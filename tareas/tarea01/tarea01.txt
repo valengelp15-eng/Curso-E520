@@ -1,0 +1,1276 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20260826151502
+Username: LAPTOP-HK3T441J\valen
+RunAs User: LAPTOP-HK3T441J\valen
+Configuration Name: 
+Machine: LAPTOP-HK3T441J (Microsoft Windows NT 10.0.22621.0)
+Host Application: C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe
+Process ID: 1524
+PSVersion: 5.1.22621.4249
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.22621.4249
+BuildVersion: 10.0.22621.4249
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is .\tareas\tarea01\tarea01.txt
+PS C:\users\valen\documents\Curso-E520> pwd
+
+Path
+----
+C:\users\valen\documents\Curso-E520
+
+
+PS C:\users\valen\documents\Curso-E520> cd /
+PS C:\> pwd
+
+Path
+----
+C:\
+
+
+PS C:\> cd Users
+PS C:\Users> pwd
+
+Path
+----
+C:\Users
+
+
+PS C:\Users> cd ..
+PS C:\> pwd
+
+Path
+----
+C:\
+
+
+PS C:\> cd ~
+PS C:\Users\valen> pwd
+
+Path
+----
+C:\Users\valen
+
+
+PS C:\Users\valen> cd ../..
+PS C:\> whoami
+
+PS C:\> cd ~\desktop
+PS C:\Users\valen\desktop> pwd
+
+Path
+----
+C:\Users\valen\desktop
+
+
+PS C:\Users\valen\desktop> cd ~
+PS C:\Users\valen> mkdir $env:TEMP/tutorial
+
+
+    Directory: C:\Users\valen\AppData\Local\Temp
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        26/08/2026     15:17                tutorial
+
+
+PS C:\Users\valen> cd $env:temp/tutorial
+PS C:\Users\valen\AppData\Local\Temp\tutorial> mkdir dir1,dir2,dir3
+
+
+    Directory: C:\Users\valen\AppData\Local\Temp\tutorial
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        26/08/2026     15:17                dir1
+d-----        26/08/2026     15:17                dir2
+d-----        26/08/2026     15:17                dir3
+
+
+PS C:\Users\valen\AppData\Local\Temp\tutorial> ls
+
+
+    Directory: C:\Users\valen\AppData\Local\Temp\tutorial
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        26/08/2026     15:17                dir1
+d-----        26/08/2026     15:17                dir2
+d-----        26/08/2026     15:17                dir3
+
+
+PS C:\Users\valen\AppData\Local\Temp\tutorial> mkdir dir4/dir5/dir6
+
+
+    Directory: C:\Users\valen\AppData\Local\Temp\tutorial\dir4\dir5
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        26/08/2026     15:18                dir6
+
+
+PS C:\Users\valen\AppData\Local\Temp\tutorial> ls
+
+
+    Directory: C:\Users\valen\AppData\Local\Temp\tutorial
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        26/08/2026     15:17                dir1
+d-----        26/08/2026     15:17                dir2
+d-----        26/08/2026     15:17                dir3
+d-----        26/08/2026     15:18                dir4
+
+
+PS C:\Users\valen\AppData\Local\Temp\tutorial> cd dir4
+PS C:\Users\valen\AppData\Local\Temp\tutorial\dir4> ls
+
+
+    Directory: C:\Users\valen\AppData\Local\Temp\tutorial\dir4
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        26/08/2026     15:18                dir5
+
+
+PS C:\Users\valen\AppData\Local\Temp\tutorial\dir4> cd dir5
+PS C:\Users\valen\AppData\Local\Temp\tutorial\dir4\dir5> ls
+
+
+    Directory: C:\Users\valen\AppData\Local\Temp\tutorial\dir4\dir5
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        26/08/2026     15:18                dir6
+
+
+PS C:\Users\valen\AppData\Local\Temp\tutorial\dir4\dir5> cd ../..
+PS C:\Users\valen\AppData\Local\Temp\tutorial> mkdir another,folder
+
+
+    Directory: C:\Users\valen\AppData\Local\Temp\tutorial
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        26/08/2026     15:18                another
+d-----        26/08/2026     15:18                folder
+
+
+PS C:\Users\valen\AppData\Local\Temp\tutorial> ls
+
+
+    Directory: C:\Users\valen\AppData\Local\Temp\tutorial
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        26/08/2026     15:18                another
+d-----        26/08/2026     15:17                dir1
+d-----        26/08/2026     15:17                dir2
+d-----        26/08/2026     15:17                dir3
+d-----        26/08/2026     15:18                dir4
+d-----        26/08/2026     15:18                folder
+
+
+PS C:\Users\valen\AppData\Local\Temp\tutorial> mkdir "folder1"
+
+
+    Directory: C:\Users\valen\AppData\Local\Temp\tutorial
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        26/08/2026     15:19                folder1
+
+
+PS C:\Users\valen\AppData\Local\Temp\tutorial> mkdir 'folder2'
+
+
+    Directory: C:\Users\valen\AppData\Local\Temp\tutorial
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        26/08/2026     15:19                folder2
+
+
+PS C:\Users\valen\AppData\Local\Temp\tutorial> mkdir folder 3
+>> TerminatingError(mkdir): "A positional parameter cannot be found that accepts argument '3'."
+mkdir : A positional parameter cannot be found that accepts argument '3'.
+At line:1 char:1
++ mkdir folder 3
++ ~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [mkdir], ParameterBindingException
+    + FullyQualifiedErrorId : PositionalParameterNotFound,mkdir
+mkdir : A positional parameter cannot be found that accepts argument '3'.
+At line:1 char:1
++ mkdir folder 3
++ ~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [mkdir], ParameterBindi
+   ngException
+    + FullyQualifiedErrorId : PositionalParameterNotFound,mkdir
+
+PS C:\Users\valen\AppData\Local\Temp\tutorial> mkdir folder` 3
+
+
+    Directory: C:\Users\valen\AppData\Local\Temp\tutorial
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        26/08/2026     15:20                folder 3
+
+
+PS C:\Users\valen\AppData\Local\Temp\tutorial> mkdir "folder4","folder5"
+
+
+    Directory: C:\Users\valen\AppData\Local\Temp\tutorial
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        26/08/2026     15:21                folder4
+d-----        26/08/2026     15:21                folder5
+
+
+PS C:\Users\valen\AppData\Local\Temp\tutorial> mkdir "folder6/folder7"
+
+
+    Directory: C:\Users\valen\AppData\Local\Temp\tutorial\folder6
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        26/08/2026     15:21                folder7
+
+
+PS C:\Users\valen\AppData\Local\Temp\tutorial> ls
+
+
+    Directory: C:\Users\valen\AppData\Local\Temp\tutorial
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        26/08/2026     15:18                another
+d-----        26/08/2026     15:17                dir1
+d-----        26/08/2026     15:17                dir2
+d-----        26/08/2026     15:17                dir3
+d-----        26/08/2026     15:18                dir4
+d-----        26/08/2026     15:18                folder
+d-----        26/08/2026     15:20                folder 3
+d-----        26/08/2026     15:19                folder1
+d-----        26/08/2026     15:19                folder2
+d-----        26/08/2026     15:21                folder4
+d-----        26/08/2026     15:21                folder5
+d-----        26/08/2026     15:21                folder6
+
+
+PS C:\Users\valen\AppData\Local\Temp\tutorial> ls > output.txt
+PS C:\Users\valen\AppData\Local\Temp\tutorial> ParameterBinding(Out-File): name="InputObject"; value="another"
+>> ParameterBinding(Out-File): name="InputObject"; value="dir1"
+>> ParameterBinding(Out-File): name="InputObject"; value="dir2"
+>> ParameterBinding(Out-File): name="InputObject"; value="dir3"
+>> ParameterBinding(Out-File): name="InputObject"; value="dir4"
+>> ParameterBinding(Out-File): name="InputObject"; value="folder"
+>> ParameterBinding(Out-File): name="InputObject"; value="folder 3"
+>> ParameterBinding(Out-File): name="InputObject"; value="folder1"
+>> ParameterBinding(Out-File): name="InputObject"; value="folder2"
+>> ParameterBinding(Out-File): name="InputObject"; value="folder4"
+>> ParameterBinding(Out-File): name="InputObject"; value="folder5"
+>> ParameterBinding(Out-File): name="InputObject"; value="folder6"
+>> ParameterBinding(Out-File): name="InputObject"; value="output.txt"
+PS C:\Users\valen\AppData\Local\Temp\tutorial> cat output.txt
+
+
+    Directory: C:\Users\valen\AppData\Local\Temp\tutorial
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        26/08/2026     15:18                another
+d-----        26/08/2026     15:17                dir1
+d-----        26/08/2026     15:17                dir2
+d-----        26/08/2026     15:17                dir3
+d-----        26/08/2026     15:18                dir4
+d-----        26/08/2026     15:18                folder
+d-----        26/08/2026     15:20                folder 3
+d-----        26/08/2026     15:19                folder1
+d-----        26/08/2026     15:19                folder2
+d-----        26/08/2026     15:21                folder4
+d-----        26/08/2026     15:21                folder5
+d-----        26/08/2026     15:21                folder6
+-a----        26/08/2026     15:21              0 output.txt
+
+
+PS C:\Users\valen\AppData\Local\Temp\tutorial> echo "This is a test"
+This is a test
+PS C:\Users\valen\AppData\Local\Temp\tutorial> echo "This is a test" > test_1.txt
+>> ParameterBinding(Out-File): name="InputObject"; value="This is a test"
+PS C:\Users\valen\AppData\Local\Temp\tutorial> echo "This is a second test" > test2.txt
+>> ParameterBinding(Out-File): name="InputObject"; value="This is a second test"
+PS C:\Users\valen\AppData\Local\Temp\tutorial> echo "This is a third test" >test_3.txt
+>> ParameterBinding(Out-File): name="InputObject"; value="This is a third test"
+PS C:\Users\valen\AppData\Local\Temp\tutorial> ls
+
+
+    Directory: C:\Users\valen\AppData\Local\Temp\tutorial
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        26/08/2026     15:18                another
+d-----        26/08/2026     15:17                dir1
+d-----        26/08/2026     15:17                dir2
+d-----        26/08/2026     15:17                dir3
+d-----        26/08/2026     15:18                dir4
+d-----        26/08/2026     15:18                folder
+d-----        26/08/2026     15:20                folder 3
+d-----        26/08/2026     15:19                folder1
+d-----        26/08/2026     15:19                folder2
+d-----        26/08/2026     15:21                folder4
+d-----        26/08/2026     15:21                folder5
+d-----        26/08/2026     15:21                folder6
+-a----        26/08/2026     15:21           2454 output.txt
+-a----        26/08/2026     15:22             48 test2.txt
+-a----        26/08/2026     15:22             34 test_1.txt
+-a----        26/08/2026     15:23             46 test_3.txt
+
+
+PS C:\Users\valen\AppData\Local\Temp\tutorial> cat test_1.txt,test_2.txt,test_3.txt
+cat : Cannot find path 'C:\Users\valen\AppData\Local\Temp\tutorial\test_2.txt' because it does not exist.
+At line:1 char:1
++ cat test_1.txt,test_2.txt,test_3.txt
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Users\valen\...rial\test_2.txt:String) [Get-Content], 
+ItemNotFoundException
+    + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.GetContentCommand
+cat : Cannot find path
+'C:\Users\valen\AppData\Local\Temp\tutorial\test_2.txt' because it does
+not exist.
+At line:1 char:1
++ cat test_1.txt,test_2.txt,test_3.txt
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Users\valen\...rial\test
+   _2.txt:String) [Get-Content], ItemNotFoundException
+    + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.G
+   etContentCommand
+
+This is a test
+This is a third test
+PS C:\Users\valen\AppData\Local\Temp\tutorial> cat test_1.txt,test_2.txt,test_3.txt
+cat : Cannot find path 'C:\Users\valen\AppData\Local\Temp\tutorial\test_2.txt' because it does not exist.
+At line:1 char:1
++ cat test_1.txt,test_2.txt,test_3.txt
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Users\valen\...rial\test_2.txt:String) [Get-Content], 
+ItemNotFoundException
+    + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.GetContentCommand
+cat : Cannot find path
+'C:\Users\valen\AppData\Local\Temp\tutorial\test_2.txt' because it does
+not exist.
+At line:1 char:1
++ cat test_1.txt,test_2.txt,test_3.txt
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Users\valen\...rial\test
+   _2.txt:String) [Get-Content], ItemNotFoundException
+    + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.G
+   etContentCommand
+
+This is a test
+This is a third test
+PS C:\Users\valen\AppData\Local\Temp\tutorial> cat test_?.txt
+This is a test
+This is a third test
+PS C:\Users\valen\AppData\Local\Temp\tutorial> cat test_*
+This is a test
+This is a third test
+PS C:\Users\valen\AppData\Local\Temp\tutorial> cat t* > combined.txt
+>> ParameterBinding(Out-File): name="InputObject"; value="This is a second test"
+>> ParameterBinding(Out-File): name="InputObject"; value="This is a test"
+>> ParameterBinding(Out-File): name="InputObject"; value="This is a third test"
+PS C:\Users\valen\AppData\Local\Temp\tutorial> cat combined.txt
+This is a second test
+This is a test
+This is a third test
+PS C:\Users\valen\AppData\Local\Temp\tutorial> cat t* >> combined.txt
+>> ParameterBinding(Out-File): name="InputObject"; value="This is a second test"
+>> ParameterBinding(Out-File): name="InputObject"; value="This is a test"
+>> ParameterBinding(Out-File): name="InputObject"; value="This is a third test"
+PS C:\Users\valen\AppData\Local\Temp\tutorial> echo "I've appended a line!" >> combined.txt
+>> ParameterBinding(Out-File): name="InputObject"; value="I've appended a line!"
+PS C:\Users\valen\AppData\Local\Temp\tutorial> cat combined.txt
+This is a second test
+This is a test
+This is a third test
+This is a second test
+This is a test
+This is a third test
+I've appended a line!
+PS C:\Users\valen\AppData\Local\Temp\tutorial> more combined.txt
+
+PS C:\Users\valen\AppData\Local\Temp\tutorial> q
+q : The term 'q' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the 
+spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ q
++ ~
+    + CategoryInfo          : ObjectNotFound: (q:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+q : The term 'q' is not recognized as the name of a cmdlet, function,
+script file, or operable program. Check the spelling of the name, or if a
+path was included, verify that the path is correct and try again.
+At line:1 char:1
++ q
++ ~
+    + CategoryInfo          : ObjectNotFound: (q:String) [], CommandNotFou
+   ndException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\valen\AppData\Local\Temp\tutorial> more q
+Get-Content : Cannot find path 'C:\Users\valen\AppData\Local\Temp\tutorial\q' because it does not exist.
+At line:7 char:9
++         Get-Content $file | more.com
++         ~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Users\valen\...Temp\tutorial\q:String) [Get-Content], 
+ItemNotFoundException
+    + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.GetContentCommand
+Get-Content : Cannot find path
+'C:\Users\valen\AppData\Local\Temp\tutorial\q' because it does not exist.
+At line:7 char:9
++         Get-Content $file | more.com
++         ~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Users\valen\...Temp\tuto
+   rial\q:String) [Get-Content], ItemNotFoundException
+    + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.G
+   etContentCommand
+
+
+PS C:\Users\valen\AppData\Local\Temp\tutorial> echo "Lower case" > a.txt
+>> ParameterBinding(Out-File): name="InputObject"; value="Lower case"
+PS C:\Users\valen\AppData\Local\Temp\tutorial> echo "Upper case" > A.TXT
+>> ParameterBinding(Out-File): name="InputObject"; value="Upper case"
+PS C:\Users\valen\AppData\Local\Temp\tutorial> echo "Mixed case" > A.txt
+>> ParameterBinding(Out-File): name="InputObject"; value="Mixed case"
+PS C:\Users\valen\AppData\Local\Temp\tutorial> ls
+
+
+    Directory: C:\Users\valen\AppData\Local\Temp\tutorial
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        26/08/2026     15:18                another
+d-----        26/08/2026     15:17                dir1
+d-----        26/08/2026     15:17                dir2
+d-----        26/08/2026     15:17                dir3
+d-----        26/08/2026     15:18                dir4
+d-----        26/08/2026     15:18                folder
+d-----        26/08/2026     15:20                folder 3
+d-----        26/08/2026     15:19                folder1
+d-----        26/08/2026     15:19                folder2
+d-----        26/08/2026     15:21                folder4
+d-----        26/08/2026     15:21                folder5
+d-----        26/08/2026     15:21                folder6
+-a----        26/08/2026     15:26             26 a.txt
+-a----        26/08/2026     15:25            292 combined.txt
+-a----        26/08/2026     15:21           2454 output.txt
+-a----        26/08/2026     15:22             48 test2.txt
+-a----        26/08/2026     15:22             34 test_1.txt
+-a----        26/08/2026     15:23             46 test_3.txt
+
+
+PS C:\Users\valen\AppData\Local\Temp\tutorial> mv combined.txt dir1
+PS C:\Users\valen\AppData\Local\Temp\tutorial> ls dir1
+
+
+    Directory: C:\Users\valen\AppData\Local\Temp\tutorial\dir1
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        26/08/2026     15:25            292 combined.txt
+
+
+PS C:\Users\valen\AppData\Local\Temp\tutorial> mv dir/* .
+mv : Cannot find path 'C:\Users\valen\AppData\Local\Temp\tutorial\dir' because it does not exist.
+At line:1 char:1
++ mv dir/* .
++ ~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Users\valen\...mp\tutorial\dir:String) [Move-Item], 
+ItemNotFoundException
+    + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.MoveItemCommand
+mv : Cannot find path 'C:\Users\valen\AppData\Local\Temp\tutorial\dir'
+because it does not exist.
+At line:1 char:1
++ mv dir/* .
++ ~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Users\valen\...mp\tutori
+   al\dir:String) [Move-Item], ItemNotFoundException
+    + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.M
+   oveItemCommand
+
+PS C:\Users\valen\AppData\Local\Temp\tutorial> mv dir1/* .
+PS C:\Users\valen\AppData\Local\Temp\tutorial> mv combined.txt,test_1.txt,test_2.txt,test_3.txt,dir3 dir2
+mv : Cannot find path 'C:\Users\valen\AppData\Local\Temp\tutorial\test_2.txt' because it does not exist.
+At line:1 char:1
++ mv combined.txt,test_1.txt,test_2.txt,test_3.txt,dir3 dir2
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Users\valen\...rial\test_2.txt:String) [Move-Item], 
+ItemNotFoundException
+    + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.MoveItemCommand
+mv : Cannot find path
+'C:\Users\valen\AppData\Local\Temp\tutorial\test_2.txt' because it does
+not exist.
+At line:1 char:1
++ mv combined.txt,test_1.txt,test_2.txt,test_3.txt,dir3 dir2
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Users\valen\...rial\test
+   _2.txt:String) [Move-Item], ItemNotFoundException
+    + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.M
+   oveItemCommand
+
+PS C:\Users\valen\AppData\Local\Temp\tutorial> mv combined.txt,test_1.txt,test_2.txt,test_3.txt,dir3 dir2
+mv : Cannot find path 'C:\Users\valen\AppData\Local\Temp\tutorial\combined.txt' because it does not exist.
+At line:1 char:1
++ mv combined.txt,test_1.txt,test_2.txt,test_3.txt,dir3 dir2
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Users\valen\...al\combined.txt:String) [Move-Item], 
+ItemNotFoundException
+    + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.MoveItemCommand
+mv : Cannot find path
+'C:\Users\valen\AppData\Local\Temp\tutorial\combined.txt' because it does
+not exist.
+At line:1 char:1
++ mv combined.txt,test_1.txt,test_2.txt,test_3.txt,dir3 dir2
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Users\valen\...al\combin
+   ed.txt:String) [Move-Item], ItemNotFoundException
+    + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.M
+   oveItemCommand
+
+mv : Cannot find path 'C:\Users\valen\AppData\Local\Temp\tutorial\test_1.txt' because it does not exist.
+At line:1 char:1
++ mv combined.txt,test_1.txt,test_2.txt,test_3.txt,dir3 dir2
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Users\valen\...rial\test_1.txt:String) [Move-Item], 
+ItemNotFoundException
+    + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.MoveItemCommand
+mv : Cannot find path
+'C:\Users\valen\AppData\Local\Temp\tutorial\test_1.txt' because it does
+not exist.
+At line:1 char:1
++ mv combined.txt,test_1.txt,test_2.txt,test_3.txt,dir3 dir2
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Users\valen\...rial\test
+   _1.txt:String) [Move-Item], ItemNotFoundException
+    + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.M
+   oveItemCommand
+
+mv : Cannot find path 'C:\Users\valen\AppData\Local\Temp\tutorial\test_2.txt' because it does not exist.
+At line:1 char:1
++ mv combined.txt,test_1.txt,test_2.txt,test_3.txt,dir3 dir2
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Users\valen\...rial\test_2.txt:String) [Move-Item], 
+ItemNotFoundException
+    + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.MoveItemCommand
+mv : Cannot find path
+'C:\Users\valen\AppData\Local\Temp\tutorial\test_2.txt' because it does
+not exist.
+At line:1 char:1
++ mv combined.txt,test_1.txt,test_2.txt,test_3.txt,dir3 dir2
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Users\valen\...rial\test
+   _2.txt:String) [Move-Item], ItemNotFoundException
+    + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.M
+   oveItemCommand
+
+mv : Cannot find path 'C:\Users\valen\AppData\Local\Temp\tutorial\test_3.txt' because it does not exist.
+At line:1 char:1
++ mv combined.txt,test_1.txt,test_2.txt,test_3.txt,dir3 dir2
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Users\valen\...rial\test_3.txt:String) [Move-Item], 
+ItemNotFoundException
+    + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.MoveItemCommand
+mv : Cannot find path
+'C:\Users\valen\AppData\Local\Temp\tutorial\test_3.txt' because it does
+not exist.
+At line:1 char:1
++ mv combined.txt,test_1.txt,test_2.txt,test_3.txt,dir3 dir2
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Users\valen\...rial\test
+   _3.txt:String) [Move-Item], ItemNotFoundException
+    + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.M
+   oveItemCommand
+
+mv : Cannot find path 'C:\Users\valen\AppData\Local\Temp\tutorial\dir3' because it does not exist.
+At line:1 char:1
++ mv combined.txt,test_1.txt,test_2.txt,test_3.txt,dir3 dir2
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Users\valen\...p\tutorial\dir3:String) [Move-Item], 
+ItemNotFoundException
+    + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.MoveItemCommand
+mv : Cannot find path 'C:\Users\valen\AppData\Local\Temp\tutorial\dir3'
+because it does not exist.
+At line:1 char:1
++ mv combined.txt,test_1.txt,test_2.txt,test_3.txt,dir3 dir2
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Users\valen\...p\tutoria
+   l\dir3:String) [Move-Item], ItemNotFoundException
+    + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.M
+   oveItemCommand
+
+PS C:\Users\valen\AppData\Local\Temp\tutorial> ls
+
+
+    Directory: C:\Users\valen\AppData\Local\Temp\tutorial
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        26/08/2026     15:18                another
+d-----        26/08/2026     15:26                dir1
+d-----        26/08/2026     15:27                dir2
+d-----        26/08/2026     15:18                dir4
+d-----        26/08/2026     15:18                folder
+d-----        26/08/2026     15:20                folder 3
+d-----        26/08/2026     15:19                folder1
+d-----        26/08/2026     15:19                folder2
+d-----        26/08/2026     15:21                folder4
+d-----        26/08/2026     15:21                folder5
+d-----        26/08/2026     15:21                folder6
+-a----        26/08/2026     15:26             26 a.txt
+-a----        26/08/2026     15:21           2454 output.txt
+-a----        26/08/2026     15:22             48 test2.txt
+
+
+PS C:\Users\valen\AppData\Local\Temp\tutorial> ls dir2
+
+
+    Directory: C:\Users\valen\AppData\Local\Temp\tutorial\dir2
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        26/08/2026     15:17                dir3
+-a----        26/08/2026     15:25            292 combined.txt
+-a----        26/08/2026     15:22             34 test_1.txt
+-a----        26/08/2026     15:23             46 test_3.txt
+
+
+PS C:\Users\valen\AppData\Local\Temp\tutorial> mv dir2\combined.txt dir4\dir5\dir6
+PS C:\Users\valen\AppData\Local\Temp\tutorial> ls dir2
+
+
+    Directory: C:\Users\valen\AppData\Local\Temp\tutorial\dir2
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        26/08/2026     15:17                dir3
+-a----        26/08/2026     15:22             34 test_1.txt
+-a----        26/08/2026     15:23             46 test_3.txt
+
+
+PS C:\Users\valen\AppData\Local\Temp\tutorial> ls dir4\dir5\dir6
+
+
+    Directory: C:\Users\valen\AppData\Local\Temp\tutorial\dir4\dir5\dir6
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        26/08/2026     15:25            292 combined.txt
+
+
+PS C:\Users\valen\AppData\Local\Temp\tutorial> cp dir4\dir5\dir6\combined.txt .
+PS C:\Users\valen\AppData\Local\Temp\tutorial> ls
+
+
+    Directory: C:\Users\valen\AppData\Local\Temp\tutorial
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        26/08/2026     15:18                another
+d-----        26/08/2026     15:26                dir1
+d-----        26/08/2026     15:28                dir2
+d-----        26/08/2026     15:18                dir4
+d-----        26/08/2026     15:18                folder
+d-----        26/08/2026     15:20                folder 3
+d-----        26/08/2026     15:19                folder1
+d-----        26/08/2026     15:19                folder2
+d-----        26/08/2026     15:21                folder4
+d-----        26/08/2026     15:21                folder5
+d-----        26/08/2026     15:21                folder6
+-a----        26/08/2026     15:26             26 a.txt
+-a----        26/08/2026     15:25            292 combined.txt
+-a----        26/08/2026     15:21           2454 output.txt
+-a----        26/08/2026     15:22             48 test2.txt
+
+
+PS C:\Users\valen\AppData\Local\Temp\tutorial> cp combined.txt backup_combined.txt
+PS C:\Users\valen\AppData\Local\Temp\tutorial> ls
+
+
+    Directory: C:\Users\valen\AppData\Local\Temp\tutorial
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        26/08/2026     15:18                another
+d-----        26/08/2026     15:26                dir1
+d-----        26/08/2026     15:28                dir2
+d-----        26/08/2026     15:18                dir4
+d-----        26/08/2026     15:18                folder
+d-----        26/08/2026     15:20                folder 3
+d-----        26/08/2026     15:19                folder1
+d-----        26/08/2026     15:19                folder2
+d-----        26/08/2026     15:21                folder4
+d-----        26/08/2026     15:21                folder5
+d-----        26/08/2026     15:21                folder6
+-a----        26/08/2026     15:26             26 a.txt
+-a----        26/08/2026     15:25            292 backup_combined.txt
+-a----        26/08/2026     15:25            292 combined.txt
+-a----        26/08/2026     15:21           2454 output.txt
+-a----        26/08/2026     15:22             48 test2.txt
+
+
+PS C:\Users\valen\AppData\Local\Temp\tutorial> mv backup_combined.txt backup_combined.txt
+PS C:\Users\valen\AppData\Local\Temp\tutorial> ls
+
+
+    Directory: C:\Users\valen\AppData\Local\Temp\tutorial
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        26/08/2026     15:18                another
+d-----        26/08/2026     15:26                dir1
+d-----        26/08/2026     15:28                dir2
+d-----        26/08/2026     15:18                dir4
+d-----        26/08/2026     15:18                folder
+d-----        26/08/2026     15:20                folder 3
+d-----        26/08/2026     15:19                folder1
+d-----        26/08/2026     15:19                folder2
+d-----        26/08/2026     15:21                folder4
+d-----        26/08/2026     15:21                folder5
+d-----        26/08/2026     15:21                folder6
+-a----        26/08/2026     15:26             26 a.txt
+-a----        26/08/2026     15:25            292 backup_combined.txt
+-a----        26/08/2026     15:25            292 combined.txt
+-a----        26/08/2026     15:21           2454 output.txt
+-a----        26/08/2026     15:22             48 test2.txt
+
+
+PS C:\Users\valen\AppData\Local\Temp\tutorial> mv backup_combined.txt combined_backup.txt
+PS C:\Users\valen\AppData\Local\Temp\tutorial> ls
+
+
+    Directory: C:\Users\valen\AppData\Local\Temp\tutorial
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        26/08/2026     15:18                another
+d-----        26/08/2026     15:26                dir1
+d-----        26/08/2026     15:28                dir2
+d-----        26/08/2026     15:18                dir4
+d-----        26/08/2026     15:18                folder
+d-----        26/08/2026     15:20                folder 3
+d-----        26/08/2026     15:19                folder1
+d-----        26/08/2026     15:19                folder2
+d-----        26/08/2026     15:21                folder4
+d-----        26/08/2026     15:21                folder5
+d-----        26/08/2026     15:21                folder6
+-a----        26/08/2026     15:26             26 a.txt
+-a----        26/08/2026     15:25            292 combined.txt
+-a----        26/08/2026     15:25            292 combined_backup.txt
+-a----        26/08/2026     15:21           2454 output.txt
+-a----        26/08/2026     15:22             48 test2.txt
+
+
+PS C:\Users\valen\AppData\Local\Temp\tutorial> mv "folder 1" folder_1
+mv : Cannot find path 'C:\Users\valen\AppData\Local\Temp\tutorial\folder 1' because it does not exist.
+At line:1 char:1
++ mv "folder 1" folder_1
++ ~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Users\valen\...torial\folder 1:String) [Move-Item], 
+ItemNotFoundException
+    + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.MoveItemCommand
+mv : Cannot find path 'C:\Users\valen\AppData\Local\Temp\tutorial\folder
+1' because it does not exist.
+At line:1 char:1
++ mv "folder 1" folder_1
++ ~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Users\valen\...torial\fo
+   lder 1:String) [Move-Item], ItemNotFoundException
+    + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.M
+   oveItemCommand
+
+PS C:\Users\valen\AppData\Local\Temp\tutorial> mv "folder 1" folder_1
+mv : Cannot find path 'C:\Users\valen\AppData\Local\Temp\tutorial\folder 1' because it does not exist.
+At line:1 char:1
++ mv "folder 1" folder_1
++ ~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Users\valen\...torial\folder 1:String) [Move-Item], 
+ItemNotFoundException
+    + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.MoveItemCommand
+mv : Cannot find path 'C:\Users\valen\AppData\Local\Temp\tutorial\folder
+1' because it does not exist.
+At line:1 char:1
++ mv "folder 1" folder_1
++ ~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Users\valen\...torial\fo
+   lder 1:String) [Move-Item], ItemNotFoundException
+    + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.M
+   oveItemCommand
+
+PS C:\Users\valen\AppData\Local\Temp\tutorial> mv "folder 2" folder_2
+mv : Cannot find path 'C:\Users\valen\AppData\Local\Temp\tutorial\folder 2' because it does not exist.
+At line:1 char:1
++ mv "folder 2" folder_2
++ ~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Users\valen\...torial\folder 2:String) [Move-Item], 
+ItemNotFoundException
+    + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.MoveItemCommand
+mv : Cannot find path 'C:\Users\valen\AppData\Local\Temp\tutorial\folder
+2' because it does not exist.
+At line:1 char:1
++ mv "folder 2" folder_2
++ ~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Users\valen\...torial\fo
+   lder 2:String) [Move-Item], ItemNotFoundException
+    + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.M
+   oveItemCommand
+
+PS C:\Users\valen\AppData\Local\Temp\tutorial> ls
+
+
+    Directory: C:\Users\valen\AppData\Local\Temp\tutorial
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        26/08/2026     15:18                another
+d-----        26/08/2026     15:26                dir1
+d-----        26/08/2026     15:28                dir2
+d-----        26/08/2026     15:18                dir4
+d-----        26/08/2026     15:18                folder
+d-----        26/08/2026     15:20                folder 3
+d-----        26/08/2026     15:19                folder1
+d-----        26/08/2026     15:19                folder2
+d-----        26/08/2026     15:21                folder4
+d-----        26/08/2026     15:21                folder5
+d-----        26/08/2026     15:21                folder6
+-a----        26/08/2026     15:26             26 a.txt
+-a----        26/08/2026     15:25            292 combined.txt
+-a----        26/08/2026     15:25            292 combined_backup.txt
+-a----        26/08/2026     15:21           2454 output.txt
+-a----        26/08/2026     15:22             48 test2.txt
+
+
+PS C:\Users\valen\AppData\Local\Temp\tutorial> pwd
+
+Path
+----
+C:\Users\valen\AppData\Local\Temp\tutorial
+
+
+PS C:\Users\valen\AppData\Local\Temp\tutorial> rm dir4\dir5\dir6\combined.txt,combined_backup.txt
+PS C:\Users\valen\AppData\Local\Temp\tutorial> rm folder_1,folder_2,folder_3,folder_4,folder_5
+rm : Cannot find path 'C:\Users\valen\AppData\Local\Temp\tutorial\folder_1' because it does not exist.
+At line:1 char:1
++ rm folder_1,folder_2,folder_3,folder_4,folder_5
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Users\valen\...torial\folder_1:String) [Remove-Item], 
+ItemNotFoundException
+    + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.RemoveItemCommand
+rm : Cannot find path
+'C:\Users\valen\AppData\Local\Temp\tutorial\folder_1' because it does not
+exist.
+At line:1 char:1
++ rm folder_1,folder_2,folder_3,folder_4,folder_5
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Users\valen\...torial\fo
+   lder_1:String) [Remove-Item], ItemNotFoundException
+    + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.R
+   emoveItemCommand
+
+rm : Cannot find path 'C:\Users\valen\AppData\Local\Temp\tutorial\folder_2' because it does not exist.
+At line:1 char:1
++ rm folder_1,folder_2,folder_3,folder_4,folder_5
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Users\valen\...torial\folder_2:String) [Remove-Item], 
+ItemNotFoundException
+    + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.RemoveItemCommand
+rm : Cannot find path
+'C:\Users\valen\AppData\Local\Temp\tutorial\folder_2' because it does not
+exist.
+At line:1 char:1
++ rm folder_1,folder_2,folder_3,folder_4,folder_5
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Users\valen\...torial\fo
+   lder_2:String) [Remove-Item], ItemNotFoundException
+    + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.R
+   emoveItemCommand
+
+rm : Cannot find path 'C:\Users\valen\AppData\Local\Temp\tutorial\folder_3' because it does not exist.
+At line:1 char:1
++ rm folder_1,folder_2,folder_3,folder_4,folder_5
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Users\valen\...torial\folder_3:String) [Remove-Item], 
+ItemNotFoundException
+    + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.RemoveItemCommand
+rm : Cannot find path
+'C:\Users\valen\AppData\Local\Temp\tutorial\folder_3' because it does not
+exist.
+At line:1 char:1
++ rm folder_1,folder_2,folder_3,folder_4,folder_5
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Users\valen\...torial\fo
+   lder_3:String) [Remove-Item], ItemNotFoundException
+    + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.R
+   emoveItemCommand
+
+rm : Cannot find path 'C:\Users\valen\AppData\Local\Temp\tutorial\folder_4' because it does not exist.
+At line:1 char:1
++ rm folder_1,folder_2,folder_3,folder_4,folder_5
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Users\valen\...torial\folder_4:String) [Remove-Item], 
+ItemNotFoundException
+    + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.RemoveItemCommand
+rm : Cannot find path
+'C:\Users\valen\AppData\Local\Temp\tutorial\folder_4' because it does not
+exist.
+At line:1 char:1
++ rm folder_1,folder_2,folder_3,folder_4,folder_5
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Users\valen\...torial\fo
+   lder_4:String) [Remove-Item], ItemNotFoundException
+    + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.R
+   emoveItemCommand
+
+rm : Cannot find path 'C:\Users\valen\AppData\Local\Temp\tutorial\folder_5' because it does not exist.
+At line:1 char:1
++ rm folder_1,folder_2,folder_3,folder_4,folder_5
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Users\valen\...torial\folder_5:String) [Remove-Item], 
+ItemNotFoundException
+    + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.RemoveItemCommand
+rm : Cannot find path
+'C:\Users\valen\AppData\Local\Temp\tutorial\folder_5' because it does not
+exist.
+At line:1 char:1
++ rm folder_1,folder_2,folder_3,folder_4,folder_5
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Users\valen\...torial\fo
+   lder_5:String) [Remove-Item], ItemNotFoundException
+    + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.R
+   emoveItemCommand
+
+PS C:\Users\valen\AppData\Local\Temp\tutorial> rm folder_6 -Recurse
+rm : Cannot find path 'C:\Users\valen\AppData\Local\Temp\tutorial\folder_6' because it does not exist.
+At line:1 char:1
++ rm folder_6 -Recurse
++ ~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Users\valen\...torial\folder_6:String) [Remove-Item], 
+ItemNotFoundException
+    + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.RemoveItemCommand
+rm : Cannot find path
+'C:\Users\valen\AppData\Local\Temp\tutorial\folder_6' because it does not
+exist.
+At line:1 char:1
++ rm folder_6 -Recurse
++ ~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Users\valen\...torial\fo
+   lder_6:String) [Remove-Item], ItemNotFoundException
+    + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.R
+   emoveItemCommand
+
+PS C:\Users\valen\AppData\Local\Temp\tutorial> ls
+
+
+    Directory: C:\Users\valen\AppData\Local\Temp\tutorial
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        26/08/2026     15:18                another
+d-----        26/08/2026     15:26                dir1
+d-----        26/08/2026     15:28                dir2
+d-----        26/08/2026     15:18                dir4
+d-----        26/08/2026     15:18                folder
+d-----        26/08/2026     15:20                folder 3
+d-----        26/08/2026     15:19                folder1
+d-----        26/08/2026     15:19                folder2
+d-----        26/08/2026     15:21                folder4
+d-----        26/08/2026     15:21                folder5
+d-----        26/08/2026     15:21                folder6
+-a----        26/08/2026     15:26             26 a.txt
+-a----        26/08/2026     15:25            292 combined.txt
+-a----        26/08/2026     15:21           2454 output.txt
+-a----        26/08/2026     15:22             48 test2.txt
+
+
+PS C:\Users\valen\AppData\Local\Temp\tutorial> Get-Content combined.txt | Measure-Object -Line
+
+Lines Words Characters Property
+----- ----- ---------- --------
+    7
+
+
+PS C:\Users\valen\AppData\Local\Temp\tutorial> ls ~ > file_list.txt
+>> ParameterBinding(Out-File): name="InputObject"; value=".android"
+>> ParameterBinding(Out-File): name="InputObject"; value="3D Objects"
+>> ParameterBinding(Out-File): name="InputObject"; value="Contacts"
+>> ParameterBinding(Out-File): name="InputObject"; value="Creative Cloud Files"
+>> ParameterBinding(Out-File): name="InputObject"; value="Desktop"
+>> ParameterBinding(Out-File): name="InputObject"; value="Documents"
+>> ParameterBinding(Out-File): name="InputObject"; value="Downloads"
+>> ParameterBinding(Out-File): name="InputObject"; value="Favorites"
+>> ParameterBinding(Out-File): name="InputObject"; value="Links"
+>> ParameterBinding(Out-File): name="InputObject"; value="Music"
+>> ParameterBinding(Out-File): name="InputObject"; value="OneDrive"
+>> ParameterBinding(Out-File): name="InputObject"; value="Pictures"
+>> ParameterBinding(Out-File): name="InputObject"; value="Saved Games"
+>> ParameterBinding(Out-File): name="InputObject"; value="Searches"
+>> ParameterBinding(Out-File): name="InputObject"; value="seoanebabosa"
+>> ParameterBinding(Out-File): name="InputObject"; value="tareas"
+>> ParameterBinding(Out-File): name="InputObject"; value="Videos"
+>> ParameterBinding(Out-File): name="InputObject"; value=".gitconfig"
+PS C:\Users\valen\AppData\Local\Temp\tutorial> Get-Content file_list.txt | Measure-Object -Line
+
+Lines Words Characters Property
+----- ----- ---------- --------
+   21
+
+
+PS C:\Users\valen\AppData\Local\Temp\tutorial> rm file_list.txt
+PS C:\Users\valen\AppData\Local\Temp\tutorial> ls ~ | Measure-Object
+
+
+Count    : 18
+Average  :
+Sum      :
+Maximum  :
+Minimum  :
+Property :
+
+
+
+PS C:\Users\valen\AppData\Local\Temp\tutorial> ls C:\Windows | Measure-Object
+
+
+Count    : 116
+Average  :
+Sum      :
+Maximum  :
+Minimum  :
+Property :
+
+
+
+PS C:\Users\valen\AppData\Local\Temp\tutorial> ls C:\Windows | more
+
+PS C:\Users\valen\AppData\Local\Temp\tutorial> cat combined.txt | Get-Unique | Measure-Object -Line
+
+Lines Words Characters Property
+----- ----- ---------- --------
+    7
+
+
+PS C:\Users\valen\AppData\Local\Temp\tutorial> sort combined.txt | more
+
+PS C:\Users\valen\AppData\Local\Temp\tutorial> sort combined.txt | Get-Unique | Measure-Object -Line
+
+Lines Words Characters Property
+----- ----- ---------- --------
+    0
+
+
+PS C:\Users\valen\AppData\Local\Temp\tutorial> Get-Help Sort-Object -Full
+
+NAME
+    Sort-Object
+
+SYNTAX
+    Sort-Object [[-Property] <Object[]>] [-Descending] [-Unique]
+    [-InputObject <psobject>] [-Culture <string>] [-CaseSensitive]
+    [<CommonParameters>]
+
+
+PARAMETERS
+    -CaseSensitive
+
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+
+    -Culture <string>
+
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+
+    -Descending
+
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+
+    -InputObject <psobject>
+
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       true (ByValue)
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+
+    -Property <Object[]>
+
+        Required?                    false
+        Position?                    0
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+
+    -Unique
+
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+
+    <CommonParameters>
+        This cmdlet supports the common parameters: Verbose, Debug,
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,
+        OutBuffer, PipelineVariable, and OutVariable. For more
+    information, see
+        about_CommonParameters
+    (https:/go.microsoft.com/fwlink/?LinkID=113216).
+
+
+INPUTS
+    System.Management.Automation.PSObject
+
+
+OUTPUTS
+    System.Object
+
+ALIASES
+    sort
+
+
+REMARKS
+    Get-Help cannot find the Help files for this cmdlet on this computer.
+    It is displaying only partial help.
+        -- To download and install Help files for the module that includes
+    this cmdlet, use Update-Help.
+        -- To view the Help topic for this cmdlet online, type: "Get-Help
+    Sort-Object -Online" or
+           go to https://go.microsoft.com/fwlink/?LinkID=113403.
+
+
+
+PS C:\Users\valen\AppData\Local\Temp\tutorial> Get-Help Get-Unique -Full
+
+NAME
+    Get-Unique
+
+SYNTAX
+    Get-Unique [-InputObject <psobject>] [-AsString]  [<CommonParameters>]
+
+    Get-Unique [-InputObject <psobject>] [-OnType]  [<CommonParameters>]
+
+
+PARAMETERS
+    -AsString
+
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           AsString
+        Aliases                      None
+        Dynamic?                     false
+
+    -InputObject <psobject>
+
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       true (ByValue)
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+
+    -OnType
+
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           UniqueByType
+        Aliases                      None
+        Dynamic?                     false
+
+    <CommonParameters>
+        This cmdlet supports the common parameters: Verbose, Debug,
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,
+        OutBuffer, PipelineVariable, and OutVariable. For more
+    information, see
+        about_CommonParameters
+    (https:/go.microsoft.com/fwlink/?LinkID=113216).
+
+
+INPUTS
+    System.Management.Automation.PSObject
+
+
+OUTPUTS
+    System.Object
+
+ALIASES
+    gu
+
+
+REMARKS
+    Get-Help cannot find the Help files for this cmdlet on this computer.
+    It is displaying only partial help.
+        -- To download and install Help files for the module that includes
+    this cmdlet, use Update-Help.
+        -- To view the Help topic for this cmdlet online, type: "Get-Help
+    Get-Unique -Online" or
+           go to https://go.microsoft.com/fwlink/?LinkID=113335.
+
+
+
+PS C:\Users\valen\AppData\Local\Temp\tutorial> cd C:\users\valen\documents\Curso-E520
+PS C:\users\valen\documents\Curso-E520> Stop-Transcript
+**********************
+Windows PowerShell transcript end
+End time: 20260826153208
+**********************
